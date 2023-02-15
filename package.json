@@ -19,7 +19,7 @@
   },
   "scripts": {
     "start": "react-scripts start",
-    "predeploy": "yarn run build",
+    "predeploy": "npm run build",
     "deploy": "gh-pages -d build",
     "build": "react-scripts build",
     "test": "react-scripts test",
@@ -43,8 +43,5 @@
       "last 1 safari version"
     ]
   },
-  "homepage": "https://michalbudzik.github.io/js-crwn-clothing/",
-  "devDependencies": {
-    "gh-pages": "^5.0.0"
-  }
+  "homepage": "https://michalbudzik.github.io/js-crwn-clothing/"
 }
