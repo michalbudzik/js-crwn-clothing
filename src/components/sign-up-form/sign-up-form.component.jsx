@@ -21,7 +21,6 @@ const SignUpForm = () => {
 
   const handleSubmit = async (event) => {
     event.preventDefault();
-    // check if passwords match
     if (password !== confirmPassword) {
       alert('Passwords do not match');
       return
@@ -37,12 +36,6 @@ const SignUpForm = () => {
       }
       console.log('Error encountered while creting user', error);
     }
-
-
-
-    // check if user is authenticated
-
-    // create user document
   }
 
   const handleChange = (event) => {
