@@ -3,6 +3,8 @@ import ReactDOM from 'react-dom/client';
 import { BrowserRouter, HashRouter } from 'react-router-dom';
 import App from './App';
 import { UserProvider } from './contexts/user.context';
+import { ProductsProvider } from './contexts/products.context';
+import { CartProvider } from './contexts/cart.context';
 import reportWebVitals from './reportWebVitals';
 import './index.scss';
 
@@ -11,7 +13,11 @@ root.render(
   <React.StrictMode>
     <HashRouter>
       <UserProvider>
-        <App/>
+        <ProductsProvider>
+          <CartProvider>
+            <App/>
+          </CartProvider>
+        </ProductsProvider>
       </UserProvider>
     </HashRouter>
   </React.StrictMode>
