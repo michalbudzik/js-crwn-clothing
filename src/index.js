@@ -3,7 +3,7 @@ import ReactDOM from 'react-dom/client';
 import { BrowserRouter, HashRouter } from 'react-router-dom';
 import App from './App';
 import { UserProvider } from './contexts/user.context';
-import { ProductsProvider } from './contexts/products.context';
+import { CategoriesProvider } from './contexts/categories.context';
 import { CartProvider } from './contexts/cart.context';
 import reportWebVitals from './reportWebVitals';
 import './index.scss';
@@ -11,15 +11,15 @@ import './index.scss';
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-    <HashRouter>
+    <BrowserRouter>
       <UserProvider>
-        <ProductsProvider>
+        <CategoriesProvider>
           <CartProvider>
             <App/>
           </CartProvider>
-        </ProductsProvider>
+        </CategoriesProvider>
       </UserProvider>
-    </HashRouter>
+    </BrowserRouter>
   </React.StrictMode>
 );
 
